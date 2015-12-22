@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // 代码写UILabel
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 460, 200, 200)];
+    [self.view addSubview:label];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +17,91 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="FT1-O8-AqO">
+                                <rect key="frame" x="150" y="20" width="300" height="197"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CV7-3V-ifo" userLabel="TextContainer">
+                                <rect key="frame" x="0.0" y="237" width="600" height="363"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cupertino" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="olA-sy-6iK">
+                                        <rect key="frame" x="0.0" y="10" width="600" height="175"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="150"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="90"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="28C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="S5b-Ir-NyZ">
+                                        <rect key="frame" x="1" y="61" width="600" height="292"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="250"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="150"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.21568627450980393" green="0.50196078431372548" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="olA-sy-6iK" firstAttribute="top" secondItem="CV7-3V-ifo" secondAttribute="top" constant="10" id="C6s-1N-OV6"/>
+                                    <constraint firstItem="S5b-Ir-NyZ" firstAttribute="centerX" secondItem="CV7-3V-ifo" secondAttribute="centerX" id="KSe-ea-sYL"/>
+                                    <constraint firstAttribute="bottom" secondItem="S5b-Ir-NyZ" secondAttribute="bottom" constant="10" id="Zn6-w8-qXC"/>
+                                    <constraint firstItem="S5b-Ir-NyZ" firstAttribute="width" secondItem="CV7-3V-ifo" secondAttribute="width" id="maT-ta-Qge"/>
+                                    <constraint firstItem="olA-sy-6iK" firstAttribute="centerX" secondItem="CV7-3V-ifo" secondAttribute="centerX" id="on5-JG-ccD"/>
+                                    <constraint firstItem="olA-sy-6iK" firstAttribute="width" secondItem="CV7-3V-ifo" secondAttribute="width" id="wiS-zG-BF6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29019607843137252" green="0.6705882352941176" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="CV7-3V-ifo" firstAttribute="top" secondItem="FT1-O8-AqO" secondAttribute="bottom" constant="20" id="36l-mg-Z1h"/>
+                            <constraint firstItem="FT1-O8-AqO" firstAttribute="height" relation="lessThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.4" id="5Zf-A1-LHn"/>
+                            <constraint firstItem="FT1-O8-AqO" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.45" id="EgJ-bR-uKl"/>
+                            <constraint firstItem="FT1-O8-AqO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Ejl-bH-0l1"/>
+                            <constraint firstItem="CV7-3V-ifo" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.5" id="NMq-y4-g7u"/>
+                            <constraint firstItem="FT1-O8-AqO" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Qxf-jS-UPo"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="CV7-3V-ifo" secondAttribute="bottom" id="a9K-wR-vns"/>
+                            <constraint firstItem="CV7-3V-ifo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="cJd-x5-XFS"/>
+                            <constraint firstItem="FT1-O8-AqO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="fGQ-Px-zfo"/>
+                            <constraint firstItem="CV7-3V-ifo" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="180" id="hFA-TN-mut">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="FT1-O8-AqO" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="hji-pu-RV3"/>
+                            <constraint firstAttribute="trailing" secondItem="CV7-3V-ifo" secondAttribute="trailing" id="jpQ-kh-vVw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EgJ-bR-uKl"/>
+                                <exclude reference="Qxf-jS-UPo"/>
+                                <exclude reference="fGQ-Px-zfo"/>
+                                <exclude reference="NMq-y4-g7u"/>
+                                <exclude reference="hFA-TN-mut"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="5Zf-A1-LHn"/>
+                                <include reference="EgJ-bR-uKl"/>
+                                <exclude reference="Ejl-bH-0l1"/>
+                                <include reference="Qxf-jS-UPo"/>
+                                <include reference="fGQ-Px-zfo"/>
+                                <exclude reference="hji-pu-RV3"/>
+                                <exclude reference="36l-mg-Z1h"/>
+                                <include reference="NMq-y4-g7u"/>
+                                <exclude reference="cJd-x5-XFS"/>
+                                <include reference="hFA-TN-mut"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="167" y="292.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cloud" width="300" height="197"/>
+    </resources>
 </document>
